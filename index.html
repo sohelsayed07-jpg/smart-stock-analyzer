@@ -153,10 +153,7 @@ const NSE_STOCKS = {
   SBIN: {name:"State Bank of India", sector:"Banking", basePrice:685, pe:12.3, roe:14.8, debtEq:0.18, revGrowth:"+25%", profitGrowth:"+28%", divYield:"0.58%", high52:780, low52:540, volume:"12.3M", ma50:710, ma200:680, rsiBase:50, trendBias:"Up"}
 };
 
-// US Market symbols to reject
 const US_SYMBOLS = new Set(['AAPL', 'MSFT', 'GOOGL', 'GOOG', 'AMZN', 'TSLA', 'META', 'NVDA', 'JPM', 'V', 'WMT', 'PG', 'JNJ', 'XOM', 'UNH', 'CVX', 'MCD', 'KO', 'PEP']);
-
-// ---------- MOCK DATA ENGINE (Fully client-side, no external API) ----------
 let pChart=null,bChart=null,tChart=null,currentSym='',currentData=null,currentTarget=null;
 
 function switchPage(p){
@@ -185,29 +182,20 @@ function showLoad(containerId, msgs){
   },1500);
 }
 
-// Validate if symbol is NSE or reject if US/invalid
 function isValidNSESymbol(symbol){
   const sym = symbol.toUpperCase();
-  
-  // Reject US market symbols
   if(US_SYMBOLS.has(sym)){
     return {valid:false, error:`❌ "${sym}" is a US market stock (NASDAQ/NYSE). This analyzer is for NSE India stocks only.`};
   }
-  
-  // Accept if in NSE database
   if(NSE_STOCKS[sym]){
     return {valid:true, error:null};
   }
-  
-  // Reject unknown symbols
   return {valid:false, error:`❌ "${sym}" is not found in NSE database. Try stocks like RELIANCE, TCS, INFY, HDFCBANK, WIPRO, TATAMOTORS, IOC, TATAPOWER, MARUTI, ICICIBANK.`};
 }
 
-// generate realistic analysis for NSE symbols only
 function generateMockAnalysis(symbol){
   const sym = symbol.toUpperCase();
   const p = NSE_STOCKS[sym];
-  
   if(!p) return null;
   
   const currentPrice = p.basePrice + (Math.random() * 12 - 6);
@@ -292,7 +280,7 @@ function generateMockTarget(symbol, analysis){
     {type:"negative", text:"Global interest rate uncertainty may impact FII flows", impact:"Medium"},
     {type:"negative", text:"Intense competition & pricing pressure in core segment", impact:"Low"}
   ];
-  const rationale = `${analysis.companyName} is positioned at ₹${cp.toFixed(0)}. Our 12-month base case of ₹${Math.round(base12)} implies ${(((base12-cp)/cp)*100).toFixed(1)}% upside, supported by sector tailwinds and strong fundamentals.`;
+  const rationale = `${analysis.companyName} is positioned at ₹${cp.toFixed(0)}. Our 12-month base case of ₹${Math.round(base12)} implies ${(((base12-cp)/cp)*100).toFixed(1)}% upside, supported by sector tailwinds.`;
   
   return {
     symbol, companyName:analysis.companyName, currentPrice:cp, analysisDate:"May 2026",
@@ -317,7 +305,6 @@ async function runAnalysis(){
   const sym = document.getElementById('stockInput').value.trim().toUpperCase();
   if(!sym) return;
   
-  // Validate symbol
   const validation = isValidNSESymbol(sym);
   if(!validation.valid){
     document.getElementById('analyzer-results').innerHTML = `<div class="err-box">${validation.error}</div>`;
@@ -352,10 +339,8 @@ async function runPredictor(){
   renderPredictor(currentTarget, currentSym, currentData);
 }
 
-// rendering functions
 function pBar(v,max=100,color='#1d9e75'){return`<div class="prog-bar"><div class="prog-fill" style="width:${Math.min(100,(v/max)*100).toFixed(0)}%;background:${color}"></div></div>`;}
 function getVClass(v){return v==='BUY'?'verdict-buy':v==='SELL'?'verdict-sell':'verdict-hold';}
-function scColor(s){return s==='bull'?'#3fb950':s==='base'?'#378add':'#f85149';}
 
 function renderAnalyzer(d,sym){
   const tc=d.technicals, fn=d.fundamentals, bt=d.backtest, hs=d.healthScore;
