@@ -139,18 +139,18 @@ body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',system-ui,-apple-sy
 <script>
 // ---------- NSE STOCK DATABASE & MARKET VALIDATION ----------
 const NSE_STOCKS = {
-  RELIANCE: {name:"Reliance Industries Ltd", sector:"Oil & Gas / Retail", basePrice:2850, pe:25.4, roe:14.2, debtEq:0.82, revGrowth:"+11.2%", profitGrowth:"+9.5%", divYield:"0.45%", high52:3120, low52:2480, volume:"2.3M", ma50:2950, ma200:2750, rsiBase:52, trendBias:"Neutral"},
-  TCS: {name:"Tata Consultancy Services", sector:"IT Services", basePrice:4080, pe:28.7, roe:38.5, debtEq:0.09, revGrowth:"+6.8%", profitGrowth:"+5.2%", divYield:"1.75%", high52:4250, low52:3540, volume:"1.8M", ma50:4120, ma200:3980, rsiBase:48, trendBias:"Neutral"},
-  INFY: {name:"Infosys Ltd", sector:"IT", basePrice:1520, pe:23.1, roe:30.1, debtEq:0.12, revGrowth:"+7.2%", profitGrowth:"+4.8%", divYield:"1.95%", high52:1675, low52:1350, volume:"5.1M", ma50:1580, ma200:1480, rsiBase:55, trendBias:"Up"},
-  HDFCBANK: {name:"HDFC Bank Ltd", sector:"Banking", basePrice:1680, pe:19.2, roe:16.4, debtEq:0.35, revGrowth:"+18%", profitGrowth:"+15%", divYield:"0.32%", high52:1790, low52:1380, volume:"8.4M", ma50:1720, ma200:1620, rsiBase:58, trendBias:"Up"},
-  WIPRO: {name:"Wipro Ltd", sector:"IT", basePrice:485, pe:21.5, roe:19.2, debtEq:0.15, revGrowth:"+4.2%", profitGrowth:"+3.1%", divYield:"0.85%", high52:545, low52:412, volume:"7.8M", ma50:510, ma200:480, rsiBase:44, trendBias:"Down"},
-  TATAMOTORS: {name:"Tata Motors Ltd", sector:"Automotive", basePrice:895, pe:9.7, roe:22.4, debtEq:1.45, revGrowth:"+21%", profitGrowth:"+32%", divYield:"0.22%", high52:1045, low52:648, volume:"14.2M", ma50:920, ma200:800, rsiBase:62, trendBias:"Up"},
-  IOC: {name:"Indian Oil Corp", sector:"Oil Marketing", basePrice:148, pe:5.3, roe:18.9, debtEq:1.12, revGrowth:"+8%", profitGrowth:"-2%", divYield:"6.4%", high52:178, low52:119, volume:"9.1M", ma50:155, ma200:145, rsiBase:38, trendBias:"Neutral"},
-  TATAPOWER: {name:"Tata Power Co.", sector:"Power", basePrice:415, pe:26.3, roe:15.8, debtEq:2.11, revGrowth:"+12%", profitGrowth:"+14%", divYield:"0.62%", high52:458, low52:268, volume:"11.5M", ma50:430, ma200:380, rsiBase:51, trendBias:"Neutral"},
-  MARUTI: {name:"Maruti Suzuki India", sector:"Automotive", basePrice:12850, pe:18.2, roe:26.5, debtEq:0.08, revGrowth:"+15%", profitGrowth:"+18%", divYield:"1.05%", high52:14280, low52:10200, volume:"0.6M", ma50:13100, ma200:12500, rsiBase:54, trendBias:"Up"},
-  ICICIBANK: {name:"ICICI Bank Ltd", sector:"Banking", basePrice:1245, pe:16.8, roe:18.2, debtEq:0.22, revGrowth:"+22%", profitGrowth:"+20%", divYield:"0.48%", high52:1380, low52:950, volume:"6.5M", ma50:1280, ma200:1150, rsiBase:60, trendBias:"Up"},
-  BAJAJFINSV: {name:"Bajaj Finserv Ltd", sector:"Financial Services", basePrice:1856, pe:15.4, roe:21.3, debtEq:1.02, revGrowth:"+19%", profitGrowth:"+22%", divYield:"0.37%", high52:2050, low52:1480, volume:"0.9M", ma50:1920, ma200:1780, rsiBase:56, trendBias:"Up"},
-  SBIN: {name:"State Bank of India", sector:"Banking", basePrice:685, pe:12.3, roe:14.8, debtEq:0.18, revGrowth:"+25%", profitGrowth:"+28%", divYield:"0.58%", high52:780, low52:540, volume:"12.3M", ma50:710, ma200:650, rsiBase:64, trendBias:"Up"}
+  RELIANCE: {name:"Reliance Industries Ltd", sector:"Oil & Gas / Retail", basePrice:2850, pe:25.4, roe:14.2, debtEq:0.82, revGrowth:"+11.2%", profitGrowth:"+9.5%", divYield:"0.45%", high52:3120, low52:2450, volume:"3.2M", ma50:2920, ma200:2750, rsiBase:55, trendBias:"Neutral"},
+  TCS: {name:"Tata Consultancy Services", sector:"IT Services", basePrice:4080, pe:28.7, roe:38.5, debtEq:0.09, revGrowth:"+6.8%", profitGrowth:"+5.2%", divYield:"1.75%", high52:4250, low52:3540, volume:"1.8M", ma50:4150, ma200:3980, rsiBase:58, trendBias:"Up"},
+  INFY: {name:"Infosys Ltd", sector:"IT", basePrice:1520, pe:23.1, roe:30.1, debtEq:0.12, revGrowth:"+7.2%", profitGrowth:"+4.8%", divYield:"1.95%", high52:1675, low52:1350, volume:"5.1M", ma50:1580, ma200:1510, rsiBase:52, trendBias:"Up"},
+  HDFCBANK: {name:"HDFC Bank Ltd", sector:"Banking", basePrice:1680, pe:19.2, roe:16.4, debtEq:0.35, revGrowth:"+18%", profitGrowth:"+15%", divYield:"0.32%", high52:1790, low52:1380, volume:"8.4M", ma50:1720, ma200:1650, rsiBase:54, trendBias:"Up"},
+  WIPRO: {name:"Wipro Ltd", sector:"IT", basePrice:485, pe:21.5, roe:19.2, debtEq:0.15, revGrowth:"+4.2%", profitGrowth:"+3.1%", divYield:"0.85%", high52:545, low52:412, volume:"7.8M", ma50:510, ma200:480, rsiBase:48, trendBias:"Neutral"},
+  TATAMOTORS: {name:"Tata Motors Ltd", sector:"Automotive", basePrice:895, pe:9.7, roe:22.4, debtEq:1.45, revGrowth:"+21%", profitGrowth:"+32%", divYield:"0.22%", high52:1045, low52:648, volume:"14.2M", ma50:920, ma200:850, rsiBase:62, trendBias:"Up"},
+  IOC: {name:"Indian Oil Corp", sector:"Oil Marketing", basePrice:148, pe:5.3, roe:18.9, debtEq:1.12, revGrowth:"+8%", profitGrowth:"-2%", divYield:"6.4%", high52:178, low52:119, volume:"9.1M", ma50:152, ma200:145, rsiBase:45, trendBias:"Down"},
+  TATAPOWER: {name:"Tata Power Co.", sector:"Power", basePrice:415, pe:26.3, roe:15.8, debtEq:2.11, revGrowth:"+12%", profitGrowth:"+14%", divYield:"0.62%", high52:458, low52:268, volume:"11.5M", ma50:425, ma200:395, rsiBase:56, trendBias:"Up"},
+  MARUTI: {name:"Maruti Suzuki India", sector:"Automotive", basePrice:12850, pe:18.2, roe:26.5, debtEq:0.08, revGrowth:"+15%", profitGrowth:"+18%", divYield:"1.05%", high52:14280, low52:10200, volume:"2.1M", ma50:13200, ma200:12100, rsiBase:57, trendBias:"Up"},
+  ICICIBANK: {name:"ICICI Bank Ltd", sector:"Banking", basePrice:1245, pe:16.8, roe:18.2, debtEq:0.22, revGrowth:"+22%", profitGrowth:"+20%", divYield:"0.48%", high52:1380, low52:950, volume:"6.5M", ma50:1280, ma200:1200, rsiBase:53, trendBias:"Up"},
+  BAJAJFINSV: {name:"Bajaj Finserv Ltd", sector:"Financial Services", basePrice:1856, pe:15.4, roe:21.3, debtEq:1.02, revGrowth:"+19%", profitGrowth:"+22%", divYield:"0.37%", high52:2050, low52:1480, volume:"1.9M", ma50:1900, ma200:1800, rsiBase:59, trendBias:"Up"},
+  SBIN: {name:"State Bank of India", sector:"Banking", basePrice:685, pe:12.3, roe:14.8, debtEq:0.18, revGrowth:"+25%", profitGrowth:"+28%", divYield:"0.58%", high52:780, low52:540, volume:"12.3M", ma50:710, ma200:680, rsiBase:50, trendBias:"Up"}
 };
 
 // US Market symbols to reject
@@ -232,7 +232,7 @@ function generateMockAnalysis(symbol){
   const winRate = Math.min(92, Math.max(42, Math.floor(55 + (rsival-50)*0.6)));
   const maxDrawdown = (Math.abs(12 - (overallScore/10)) + 4).toFixed(1);
   const strategyName = trend.includes("Up") ? "Momentum + Trend" : (trend.includes("Down") ? "Mean Reversion" : "Range Trading");
-  const strategyReason = trend.includes("Up") ? `Strategy captures uptrend strength with RSI ${rsival.toFixed(0)} signalling continuation.` : `Strategy focuses on reversal patterns in ${trend.toLowerCase()} region.`;
+  const strategyReason = trend.includes("Up") ? `Strategy captures uptrend strength with RSI ${rsival.toFixed(0)} signalling continuation.` : `Strategy focuses on reversal patterns in ${trend.toLowerCase()} phase.`;
   
   const priceHistory = [];
   let trendSeed = currentPrice - 80;
@@ -242,10 +242,10 @@ function generateMockAnalysis(symbol){
   }
   
   const analystVerdict = overallScore>=70?"BUY":(overallScore<=40?"SELL":"HOLD");
-  const summary = `${p.name} (${sym}) currently trades at ₹${currentPrice.toFixed(2)} with ${changePct>0?"+":""}${changePct.toFixed(2)}%. ${trend} momentum with RSI ${rsival.toFixed(0)} (${rsiSignal}). P/E: ${peVal}x, ROE: ${p.roe}%. Based on technical & fundamental analysis, the stock shows ${trend.toLowerCase()} bias.`;
+  const summary = `${p.name} (${sym}) currently trades at ₹${currentPrice.toFixed(2)} with ${changePct>0?"+":""}${changePct.toFixed(2)}%. ${trend} momentum with RSI ${rsival.toFixed(0)} (${rsiSignal}). Technical score: ${technicalScore}/100. Overall rating: ${analystVerdict}.`;
   
   return {
-    symbol:sym, companyName:p.name, sector:p.sector, currentPrice:currentPrice, change:(changePct*currentPrice/100).toFixed(2), changePct:changePct.toFixed(2), marketCap:`₹${(currentPrice*125).toLocaleString('en-IN', {maximumFractionDigits:0})} Cr`,
+    symbol:sym, companyName:p.name, sector:p.sector, currentPrice:currentPrice, change:(changePct*currentPrice/100).toFixed(2), changePct:changePct.toFixed(2), marketCap:`₹${(currentPrice*125).toLocaleString('en-IN')} Cr`, 
     high52:p.high52, low52:p.low52, volume:p.volume,
     technicals:{rsi:Math.round(rsival), rsiSignal, macd, ma50:p.ma50, ma200:p.ma200, maSignal, bollingerBand:bollinger, trend},
     fundamentals:{pe:peVal, pb:pb.toFixed(2), eps, roe:p.roe, debtToEquity:p.debtEq, revenueGrowth:p.revGrowth, profitGrowth:p.profitGrowth, dividendYield:p.divYield, valuation},
@@ -273,7 +273,7 @@ function generateMockTarget(symbol, analysis){
   const probBase = 50;
   const probBear = 100 - probBull - 35;
   
-  const triggersBull = trend.includes("Up")?"Strong earnings beat, margin expansion, capex acceleration":(sector.includes("IT")?"Digital deal wins, TCV growth, stable attrition":"Volume growth, pricing power");
+  const triggersBull = trend.includes("Up")?"Strong earnings beat, margin expansion, capex acceleration":(sector.includes("IT")?"Digital deal wins, TCV growth, stable attrition":"Volume growth, pricing power improvement");
   const triggersBase = "In-line quarterly results, stable macro, efficient working capital";
   const triggersBear = "Raw material inflation, demand slowdown, margin compression";
   
@@ -292,7 +292,7 @@ function generateMockTarget(symbol, analysis){
     {type:"negative", text:"Global interest rate uncertainty may impact FII flows", impact:"Medium"},
     {type:"negative", text:"Intense competition & pricing pressure in core segment", impact:"Low"}
   ];
-  const rationale = `${analysis.companyName} is positioned at ₹${cp.toFixed(0)}. Our 12-month base case of ₹${Math.round(base12)} implies ${(((base12-cp)/cp)*100).toFixed(1)}% upside, supported by ${triggersBull.split(',')[0]} and sector dynamics.`;
+  const rationale = `${analysis.companyName} is positioned at ₹${cp.toFixed(0)}. Our 12-month base case of ₹${Math.round(base12)} implies ${(((base12-cp)/cp)*100).toFixed(1)}% upside, supported by sector tailwinds and strong fundamentals.`;
   
   return {
     symbol, companyName:analysis.companyName, currentPrice:cp, analysisDate:"May 2026",
@@ -363,7 +363,7 @@ function renderAnalyzer(d,sym){
   document.getElementById('analyzer-results').innerHTML = `
   <div class="info-box">📊 NSE India Stock Analysis — Simulated data for educational purposes based on real market profiles.</div>
   <div class="metrics-grid">
-    <div class="metric-card"><div class="metric-label">Price</div><div class="metric-value">₹${d.currentPrice.toLocaleString('en-IN',{maximumFractionDigits:2})}</div><div class="metric-sub ${chgC}">${chgS}${d.changePct.toFixed(2)}%</div></div>
+    <div class="metric-card"><div class="metric-label">Price</div><div class="metric-value">₹${d.currentPrice.toLocaleString('en-IN',{maximumFractionDigits:2})}</div><div class="metric-sub ${chgC}">${chgS}${d.changePct}%</div></div>
     <div class="metric-card"><div class="metric-label">Market Cap</div><div class="metric-value" style="font-size:15px">${d.marketCap}</div><div class="metric-sub neutral">${d.sector}</div></div>
     <div class="metric-card"><div class="metric-label">52W High</div><div class="metric-value up">₹${d.high52.toLocaleString('en-IN')}</div></div>
     <div class="metric-card"><div class="metric-label">52W Low</div><div class="metric-value down">₹${d.low52.toLocaleString('en-IN')}</div></div>
@@ -382,7 +382,7 @@ function renderAnalyzer(d,sym){
     </div>
     <div class="card"><h3>Fundamentals <span class="badge ${fn.valuation==='Undervalued'?'badge-buy':fn.valuation==='Overvalued'?'badge-sell':'badge-hold'}">${fn.valuation}</span></h3>
       <div class="ind-row"><span class="ind-name">P/E</span><span class="ind-val">${fn.pe}x</span></div><div class="ind-row"><span class="ind-name">P/B</span><span class="ind-val">${fn.pb}x</span></div>
-      <div class="ind-row"><span class="ind-name">EPS</span><span class="ind-val">₹${fn.eps}</span></div><div class="ind-row"><span class="ind-name">ROE</span><span class="ind-val ${fn.roe>15?'up':fn.roe<10?'down':'neutral'}">${fn.roe}%</span></div>
+      <div class="ind-row"><span class="ind-name">EPS</span><span class="ind-val">₹${fn.eps}</span></div><div class="ind-row"><span class="ind-name">ROE</span><span class="ind-val ${fn.roe>15?'up':'down'}">${fn.roe}%</span></div>
       <div class="ind-row"><span class="ind-name">Debt/Equity</span><span class="ind-val ${fn.debtToEquity<0.5?'up':fn.debtToEquity>2?'down':'neutral'}">${fn.debtToEquity}</span></div>
       <div class="ind-row"><span class="ind-name">Revenue Growth</span><span class="ind-val up">${fn.revenueGrowth}</span></div>
       <div class="ind-row"><span class="ind-name">Profit Growth</span><span class="ind-val up">${fn.profitGrowth}</span></div>
@@ -398,33 +398,34 @@ function renderAnalyzer(d,sym){
     <div class="chart-wrap" style="height:140px"><canvas id="bChart" role="img"></canvas></div>
   </div>
   <div class="ai-box"><h3>AI Investment Analysis</h3><p>${d.aiSummary}</p><div style="margin-top:12px"><span style="font-size:12px;color:#7d8590;margin-right:8px">Verdict:</span><span class="verdict ${getVClass(d.verdict)}">${d.verdict}</span></div>
-  <button onclick="switchPage('predictor');if(!currentTarget)runPredictor();" style="margin-left:12px;background:#21262d;border:1px solid #30363d;border-radius:6px;padding:5px 14px;font-size:12px;color:#e6edf3;cursor:pointer;font-family:inherit">View Price Targets →</button></div>`;
+  <button onclick="switchPage('predictor');if(!currentTarget)runPredictor();" style="margin-left:12px;background:#21262d;border:1px solid #30363d;border-radius:6px;padding:5px 14px;font-size:12px;color:#7d8590;cursor:pointer">View Price Targets →</button></div>
+  `;
   
   if(pChart)pChart.destroy(); const pc=document.getElementById('pChart');
-  if(pc) pChart=new Chart(pc,{type:'line',data:{labels:d.priceLabels,datasets:[{label:sym,data:d.priceHistory,borderColor:'#1d9e75',backgroundColor:'rgba(29,158,117,0.08)',borderWidth:2,fill:true,tension:0.4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#7d8590'}}},scales:{y:{ticks:{color:'#7d8590'},grid:{color:'#21262d'}},x:{ticks:{color:'#7d8590'},grid:{display:false}}}}});
+  if(pc) pChart=new Chart(pc,{type:'line',data:{labels:d.priceLabels,datasets:[{label:sym,data:d.priceHistory,borderColor:'#1d9e75',backgroundColor:'rgba(29,158,117,0.08)',borderWidth:2,fill:true,tension:0.4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true}},scales:{y:{beginAtZero:false}}}});
   if(bChart)bChart.destroy(); const bc=document.getElementById('bChart');
   if(bc){const sr=[bt.totalReturn*0.3,bt.totalReturn*0.65,bt.totalReturn],bnr=[bt.benchmark*0.3,bt.benchmark*0.65,bt.benchmark];
-  bChart=new Chart(bc,{type:'line',data:{labels:['Yr 1','Yr 2','Yr 3'],datasets:[{label:'Strategy',data:sr,borderColor:'#1d9e75',borderWidth:2},{label:'Nifty50',data:bnr,borderColor:'#378add',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#7d8590'}}},scales:{y:{ticks:{color:'#7d8590'},grid:{color:'#21262d'}},x:{ticks:{color:'#7d8590'},grid:{display:false}}}}});}
+  bChart=new Chart(bc,{type:'line',data:{labels:['Yr 1','Yr 2','Yr 3'],datasets:[{label:'Strategy',data:sr,borderColor:'#1d9e75',borderWidth:2},{label:'Nifty50',data:bnr,borderColor:'#378add',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true}},scales:{y:{beginAtZero:true}}}});}
 }
 
 function renderPredictor(d,sym,base){
   const cp=d.currentPrice, sc=d.scenarios, kl=d.keyLevels;
-  function scenarioCard(type,label,price,cp,prob,trigger,timeline){ const pv=Number(price)||0; const upside=(((pv-cp)/cp)*100).toFixed(1); const uColor=parseFloat(upside)>=0?'#3fb950':'#f85149'; return `<div class="scenario-card sc-${type}"><div class="sc-label"><span class="${type}-c">${label}</span></div><div class="sc-price">₹${Math.round(pv)}</div><div class="sc-upside" style="color:${uColor}">${upside>0?'+':''}${upside}%</div><div class="sc-prob">${prob}% Probability</div><div class="prob-track"><div class="prob-fill-${type}" style="width:${prob}%"></div></div><div class="sc-divider"></div><div class="sc-trigger"><strong>Trigger:</strong> ${trigger}</div><div style="font-size:11px;color:#7d8590;margin-top:6px">Timeline: ${timeline}</div></div>`;}
+  function scenarioCard(type,label,price,cp,prob,trigger,timeline){ const pv=Number(price)||0; const upside=(((pv-cp)/cp)*100).toFixed(1); const uColor=parseFloat(upside)>=0?'#3fb950':'#f85149'; return `<div class="scenario-card sc-${type}"><div class="sc-label ${type}-c">${label}</div><div class="sc-price">₹${pv}</div><div class="sc-upside" style="color:${uColor}">${upside>0?'+':''}${upside}%</div><div class="sc-prob">Probability: ${prob}%</div><div class="prob-track"><div class="prob-fill-${type}" style="width:${prob}%"></div></div><hr class="sc-divider"><div class="sc-trigger"><strong>Triggers:</strong> ${trigger}</div><div style="margin-top:8px;font-size:10px;color:#7d8590">${timeline}</div></div>`; }
   document.getElementById('predictor-results').innerHTML = `
   <div class="info-box">🎯 NSE Price Target AI — 12-month scenarios based on technical & fundamental analysis.</div>
-  <div class="pt-hero"><div class="pt-current">Current Price</div><div class="pt-price">₹${cp.toLocaleString('en-IN')}</div><div style="display:flex;justify-content:center;gap:10px;margin-top:4px"><span style="font-size:12px;background:#21262d;padding:4px 12px;border-radius:6px;color:#7d8590">Analyst Consensus: ${d.analystConsensus}</span><span style="font-size:12px;background:#21262d;padding:4px 12px;border-radius:6px;color:#7d8590">Target: ₹${d.consensusTarget}</span></div></div>
+  <div class="pt-hero"><div class="pt-current">Current Price</div><div class="pt-price">₹${cp.toLocaleString('en-IN')}</div><div style="display:flex;justify-content:center;gap:10px;margin-top:4px"><span style="font-size:11px;color:#7d8590">Consensus: ${d.analystConsensus}</span><span style="font-size:11px;color:#7d8590">Target: ₹${d.consensusTarget}</span></div></div>
   <div class="time-tabs"><button class="time-tab active" id="tab3m" onclick="showHorizon('3m')">3-Month Targets</button><button class="time-tab" id="tab12m" onclick="showHorizon('12m')">12-Month Targets</button></div>
   <div id="horizon-3m"><div class="scenarios">${scenarioCard('bull','Bull Case',d.targets.threeMonth.bull,cp,d.probabilities.bull,sc.bull.trigger,'3 months')}${scenarioCard('base','Base Case',d.targets.threeMonth.base,cp,d.probabilities.base,sc.base.trigger,'3 months')}${scenarioCard('bear','Bear Case',d.targets.threeMonth.bear,cp,d.probabilities.bear,sc.bear.trigger,'3 months')}</div></div>
   <div id="horizon-12m" style="display:none"><div class="scenarios">${scenarioCard('bull','Bull Case',d.targets.twelveMonth.bull,cp,d.probabilities.bull,sc.bull.trigger,'12 months')}${scenarioCard('base','Base Case',d.targets.twelveMonth.base,cp,d.probabilities.base,sc.base.trigger,'12 months')}${scenarioCard('bear','Bear Case',d.targets.twelveMonth.bear,cp,d.probabilities.bear,sc.bear.trigger,'12 months')}</div></div>
   <div class="card" style="margin-bottom:16px"><h3>Price Target Chart — Bull / Base / Bear</h3><div class="target-chart-wrap"><canvas id="tChart"></canvas></div></div>
-  <div><div style="font-size:10px;color:#7d8590;margin-bottom:8px">Key Price Levels</div><div class="key-levels">${Object.entries(kl).map(([k,v])=>`<div class="level-card"><div class="level-lbl">${k.replace(/([A-Z])/g,' $1').trim()}</div><div class="level-val">₹${Math.round(v)}</div></div>`).join('')}</div></div>
+  <div><div style="font-size:10px;color:#7d8590;margin-bottom:8px">Key Price Levels</div><div class="key-levels">${Object.entries(kl).map(([k,v])=>`<div class="level-card"><div class="level-lbl">${k.replace(/([A-Z])/g, ' $1').trim()}</div><div class="level-val">₹${v.toLocaleString('en-IN')}</div></div>`).join('')}</div></div>
   <div class="grid-2"><div class="card"><h3>Upside Catalysts</h3><ul class="catalyst-list">${d.catalysts.filter(c=>c.type==='positive').map(c=>`<li><span class="cat-dot" style="background:#3fb950"></span><span><strong>[${c.impact}]</strong> ${c.text}</span></li>`).join('')}</ul></div>
   <div class="card"><h3>Key Risks</h3><ul class="catalyst-list">${d.catalysts.filter(c=>c.type==='negative').map(c=>`<li><span class="cat-dot" style="background:#f85149"></span><span><strong>[${c.impact}]</strong> ${c.text}</span></li>`).join('')}</ul></div></div>
   <div class="ai-target-box"><h3>AI Target Rationale</h3><p>${d.aiRationale}</p></div>`;
   showTargetChart(d,cp);
 }
-function showHorizon(h){ document.getElementById('horizon-3m').style.display=h==='3m'?'block':'none'; document.getElementById('horizon-12m').style.display=h==='12m'?'block':'none'; document.getElementById('tab3m').classList.toggle('active',h==='3m'); document.getElementById('tab12m').classList.toggle('active',h==='12m');}
-function showTargetChart(d,cp){ if(tChart)tChart.destroy(); const tc=document.getElementById('tChart'); if(!tc)return; const t3=d.targets.threeMonth, t12=d.targets.twelveMonth; tChart=new Chart(tc,{type:'bar',data:{labels:['Bull','Base','Bear'],datasets:[{label:'3-Month',data:[t3.bull,t3.base,t3.bear],backgroundColor:['#3fb950','#378add','#f85149']},{label:'12-Month',data:[t12.bull,t12.base,t12.bear],backgroundColor:['#3fb95099','#378add99','#f8514999']}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#7d8590'}}},scales:{y:{ticks:{color:'#7d8590'},grid:{color:'#21262d'}},x:{ticks:{color:'#7d8590'},grid:{display:false}}}}});}
+function showHorizon(h){ document.getElementById('horizon-3m').style.display=h==='3m'?'block':'none'; document.getElementById('horizon-12m').style.display=h==='12m'?'block':'none'; document.getElementById('tab3m').classList.toggle('active',h==='3m'); document.getElementById('tab12m').classList.toggle('active',h==='12m'); }
+function showTargetChart(d,cp){ if(tChart)tChart.destroy(); const tc=document.getElementById('tChart'); if(!tc)return; const t3=d.targets.threeMonth, t12=d.targets.twelveMonth; tChart=new Chart(tc,{type:'bar',data:{labels:['Bull 3m','Bull 12m','Base 3m','Base 12m','Bear 3m','Bear 12m'],datasets:[{label:'Target Price',data:[t3.bull,t12.bull,t3.base,t12.base,t3.bear,t12.bear],backgroundColor:['#3fb950','#3fb950','#378add','#378add','#f85149','#f85149']}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});}
 </script>
 </body>
 </html>
